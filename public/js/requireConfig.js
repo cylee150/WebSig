@@ -9,19 +9,26 @@ requirejs.config({
         'jquery' : '../../bower_components/jquery/dist/jquery',
         'async' : '../../bower_components/async/lib/async',
         'angular' : '../../bower_components/angular/angular',
-        'bootstrap' : '../../bower_components/bootstrap/dist/bootstrap'
+        'angular-route' : '../../bower_components/angular-route/angular-route',
+        'angularAMD' : '../../bower_components/angularAMD/angularAMD'
+
     },
 
     'shim' : {
+        'angular-route' : ['angular'],
+        'angularAMD' : ['angular']
 
     },
 
     'map' : {
         '*' : {
-        'Module' : '../modules'
+            'Controller' : '../controllers',
+            'Services' : '../services',
+            'Filter' : '../filters',
+            'Directive' : '../directives'
         }
     },
 
-    'deps' : ['main']
+    'deps' : ['app']
 
 });
