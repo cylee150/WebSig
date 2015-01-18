@@ -18,7 +18,7 @@ define(['app'], function (app) {
             ];
             //통신 같은거 넣는거 때문에 사용함. 통신이 성공하면 함수를 실행해라.
             callback(users);
-        }
+        };
 
     });
 
