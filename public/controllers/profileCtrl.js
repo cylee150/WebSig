@@ -1,13 +1,11 @@
 /**
  * Created by leedaniel on 15. 1. 18..
  */
-
-define(['app'], function (app) {
-    app.controller('profileCtrl', function ($scope) {
-        $scope.profile = {};
-        $scope.profile.name = 'Daniel_Lee'
-        $scope.profile.school = 'Sogang University'
-        $scope.profile.age = '26 years old'
-
+//실행해서 리턴값을 매개변수로 넘겨준다.
+define(['app', 'Service/getUser'], function (app) {
+    app.controller('profileCtrl', function ($scope, getUser) {
+        getUser(function (users) {
+            $scope.users = users;
+        });
     });
 });
