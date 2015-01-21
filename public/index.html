@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head lang="kr">
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <p>Hello World</p>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home">duq's world</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/home">Home</a></li>
+                <li><a href="#/profile">Profile</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
         <div ng-view></div>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
 
-        <script src = "../bower_components/requirejs/require.js"  data-main="js/requireConfig.js"></script>
-    </body>
+</div><!-- /.container -->
+
+
+<script src = "../bower_components/requirejs/require.js"  data-main="js/requireConfig.js"></script>
+</body>
 </html>

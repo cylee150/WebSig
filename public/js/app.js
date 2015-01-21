@@ -6,7 +6,8 @@
 
 define([
     'angularAMD',
-    'angular-route'
+    'angular-route',
+    'bootstrap'
 ], function (angularAMD) {
     // 자바에서 패키지 같은 느낌
     var app = angular.module('WebSig', ['ngRoute']);
@@ -23,6 +24,7 @@ define([
                 controller : 'profileCtrl',
                 controllerUrl : 'Controller/profileCtrl'
             }))
+
 
             .otherwise('/home');
     });
