@@ -23,7 +23,7 @@ requirejs.config({
     'map' : {
         '*' : {
             'Controller' : '../controllers',
-            'Services' : '../services',
+            'Service' : '../services',
             'Filter' : '../filters',
             'Directive' : '../directives'
         }
