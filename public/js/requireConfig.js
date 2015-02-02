@@ -17,29 +17,34 @@ require.config({
         'angular-resource': '../../bower_components/angular-resource/angular-resource',
         'hammer': '../../bower_components/hammerjs/hammer',
         'bootstrap' : '../../bower_components/bootstrap/dist/js/bootstrap'
-
     },
 
     'shim' : {
         'angular' : {
-            'exports' : 'angular'
+            'exports' : 'angular',
+            'deps' : ['jquery']
         },
-        'angular-route' : ['angular'],
+        'angular-route': ['angular'],
         'angularAMD' : ['angular'],
         'angular-animate': ['angular'],
         'angular-aria': ['angular'],
         'angular-resource': ['angular'],
-        'angular-route': ['angular'],
         'angular-material': [
             'angular-animate',
             'angular-aria',
             'hammer',
             'css!../../bower_components/angular-material/angular-material',
-            'css!../../bower_components/angular-material/theme/light-blue-dark-theme'
+            'css!../../bower_components/angular-material/themes/light-blue-dark-theme'
         ],
+        'hammer': {
+            'exports': 'hammer'
+        },
         'bootstrap' : {
             'exports' : 'bootstrap',
-            'deps' : ['css!../../bower_components/bootstrap/dist/css/bootstrap',
+            'deps' : [
+                'jquery',
+                'css!../../bower_components/bootswatch/paper/bootstrap',
+                //'css!../../bower_components/bootstrap/dist/css/bootstrap',
                 'css!../../bower_components/bootstrap/dist/css/bootstrap-theme']
         }
 
@@ -47,11 +52,20 @@ require.config({
 
     'map' : {
         '*' : {
-            'css' : '../../bower_components/require-css/css',
-            'Controller' : '../controllers',
-            'Service' : '../services',
-            'Filter' : '../filters',
-            'Directive' : '../directives'
+            'css': '../../bower_components/require-css/css',
+            'Service': '../Common/services',
+            'Resource': '../Common/resources',
+            'Filter': '../Common/filters',
+            'Directive': '../Common/directives',
+            'Controller': '../Common/controllers',
+            'Common': '../Common',
+
+            // Pages
+            'Home': '../Home',
+            'Profile': '../Profile',
+            'Main': '../Main',
+            'Detail': '../Detail',
+            'Admin': '../Admin'
         }
     },
 
